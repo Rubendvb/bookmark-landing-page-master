@@ -1,46 +1,65 @@
 import IconMenuOpen from '../../images/icon-hamburger.svg'
 import IconMenuClose from '../../images/icon-close.svg'
+import IconFacebook from '../../images/icon-facebook.svg'
+import IconTwitter from '../../images/icon-twitter.svg'
 
-import './Header.scss'
+import styles from './Header.module.scss'
 import Logo from '../Logo/Logo'
 
 export default function Header() {
   return (
-    <header className="header">
-      <nav className="header__nav">
-        <input type="checkbox" className="header__nav__check" id="nav__check" />
+    <header className={styles.header}>
+      <nav className={styles.header__nav}>
+        <input
+          type="checkbox"
+          className={styles.header__nav__check}
+          id="nav__check"
+        />
 
-        <div className="header__nav__img ">
+        <div className={styles.header__nav__img}>
           <Logo />
         </div>
 
-        <label className="header__nav__label" htmlFor="nav__check">
+        <label className={styles.header__nav__label} htmlFor="nav__check">
           <img
-            className="header__nav__label__img-open"
+            className={styles.header__nav__label__img__open}
             src={IconMenuOpen}
             alt=""
           />
 
           <img
-            className="header__nav__label__img-close"
+            className={styles.header__nav__label__img__close}
             src={IconMenuClose}
             alt=""
           />
         </label>
 
-        <ul className="header__nav__ul">
-          <li className="header__nav__ul__li">
-            <a href="#">Features</a>
-          </li>
-          <li className="header__nav__ul__li">
-            <a href="#">Pricing</a>
-          </li>
-          <li className="header__nav__ul__li">
-            <a href="#">Contact</a>
-          </li>
-          <li className="header__nav__ul__li">
-            <button>Login</button>
-          </li>
+        <ul className={styles.header__nav__ul}>
+          <div className={styles.containerLi}>
+            <li className={styles.header__nav__ul__li}>
+              <a href="#">Features</a>
+            </li>
+            <li className={styles.header__nav__ul__li}>
+              <a href="#">Pricing</a>
+            </li>
+            <li className={styles.header__nav__ul__li}>
+              <a href="#">Contact</a>
+            </li>
+            <li
+              className={`${styles.header__nav__ul__li} ${styles.li__button}`}
+            >
+              <button>Login</button>
+            </li>
+          </div>
+
+          <div className={styles.containerIcons}>
+            <li>
+              <img src={IconFacebook} alt="" />
+            </li>
+            <li>
+              <img src={IconTwitter} alt="" />
+            </li>
+          </div>
         </ul>
       </nav>
     </header>
