@@ -1,0 +1,9 @@
+@mixin side-padding {
+  padding: 0 2rem;
+}
+
+@mixin text($color-text) {
+  line-height: 1.4;
+  text-align: center;
+  color: $color-text;
+}

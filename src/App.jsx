@@ -6,6 +6,8 @@ import Questions from './assets/components/Questions/Questions'
 import Simple from './assets/components/Simple/Simple'
 import Stay from './assets/components/Stay/Stay'
 
+import {} from './assets/images/illustration-features-tab-1.svg'
+
 function App() {
   return (
     <>

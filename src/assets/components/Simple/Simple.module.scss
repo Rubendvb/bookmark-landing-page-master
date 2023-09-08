@@ -1,0 +1,49 @@
+@use '../../sass/variables' as v;
+@use '../../sass/mixins' as m;
+
+.simple {
+  display: flex;
+  flex-direction: column;
+}
+
+.simpleTitle {
+  color: v.$Very-Dark-Blue;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 500;
+}
+
+.text {
+  @include m.text(v.$Grayish-Blue);
+}
+
+.simpleMain {
+  order: 2;
+
+  @include m.side-padding;
+}
+
+.containerButton {
+  display: flex;
+  gap: 1rem;
+}
+
+.simpleImageContainer {
+  position: relative;
+  margin-top: 4.375rem;
+}
+
+.imgBg {
+  background-color: v.$Soft-Blue;
+  height: 200px;
+  width: 80%;
+  border-radius: 24% 0 0 24%;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: -1;
+}
+
+.img {
+  width: 100%;
+}
