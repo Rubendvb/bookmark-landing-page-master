@@ -25,7 +25,15 @@
 
 .containerButton {
   display: flex;
-  gap: 1rem;
+  gap: 0.875rem;
+}
+
+.buttonChrome {
+  @include m.button-browser(v.$Soft-Blue, #fff);
+}
+
+.buttonFirefox {
+  @include m.button-browser(#f7f7f7, v.$Very-Dark-Blue);
 }
 
 .simpleImageContainer {

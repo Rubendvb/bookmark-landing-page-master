@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 @mixin side-padding {
   padding: 0 2rem;
 }
@@ -6,4 +8,16 @@
   line-height: 1.4;
   text-align: center;
   color: $color-text;
+}
+
+@mixin button-browser($bg, $color-text) {
+  height: 3rem;
+  width: 9.375rem;
+  background-color: $bg;
+  color: $color-text;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.5);
 }

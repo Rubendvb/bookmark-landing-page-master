@@ -13,8 +13,8 @@ export default function Simple() {
         </p>
 
         <div className={style.containerButton}>
-          <button>Get it on Chrome</button>
-          <button>Get it on Firefox</button>
+          <button className={style.buttonChrome}>Get it on Chrome</button>
+          <button className={style.buttonFirefox}>Get it on Firefox</button>
         </div>
       </div>
 
