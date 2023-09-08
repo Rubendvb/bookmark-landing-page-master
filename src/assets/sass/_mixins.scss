@@ -1,13 +1,21 @@
 @use './variables' as v;
 
 @mixin side-padding {
-  padding: 0 2rem;
+  padding: 0 2.3rem;
 }
 
-@mixin text($color-text) {
+@mixin title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: v.$Very-Dark-Blue;
+}
+
+@mixin text($color-text, $size) {
   line-height: 1.4;
   text-align: center;
   color: $color-text;
+  font-size: $size;
 }
 
 @mixin button-browser($bg, $color-text) {

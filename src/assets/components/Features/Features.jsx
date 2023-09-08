@@ -1,10 +1,12 @@
+import styled from './Features.module.scss'
+
 export default function Features() {
   return (
-    <section>
-      <div>
-        <h2>Features</h2>
+    <section className={styled.features}>
+      <div className={styled.featuresHeader}>
+        <h2 className={styled.title}>Features</h2>
 
-        <p>
+        <p className={styled.text}>
           Our aim is to make it quick and easy for you to access your favorite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.

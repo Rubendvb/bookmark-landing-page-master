@@ -1,0 +1,21 @@
+@use '../../sass/variables' as v;
+@use '../../sass/mixins' as m;
+
+.features {
+  margin-top: 10rem;
+  @include m.side-padding;
+}
+
+.featuresHeader {
+  margin-bottom: 2.75rem;
+}
+
+.title {
+  @include m.title;
+}
+
+.text {
+  @include m.text(v.$Grayish-Blue, 0.875rem);
+
+  margin-top: 1.5rem;
+}

@@ -1,6 +1,12 @@
 @use 'variables' as v;
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: v.$font-family-Rubik;
+}
+
+body {
   font-size: 16px;
 }

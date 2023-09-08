@@ -11,10 +11,11 @@
   line-height: 1.4;
   text-align: center;
   font-weight: 500;
+  font-size: 2rem;
 }
 
 .text {
-  @include m.text(v.$Grayish-Blue);
+  @include m.text(v.$Grayish-Blue, 1rem);
 }
 
 .simpleMain {
@@ -26,6 +27,7 @@
 .containerButton {
   display: flex;
   gap: 0.875rem;
+  margin-top: 2.5rem;
 }
 
 .buttonChrome {
