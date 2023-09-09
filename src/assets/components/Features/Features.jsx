@@ -1,37 +1,56 @@
-import styled from './Features.module.scss'
+import styles from './Features.module.scss'
+
+import ImageFeatures1 from '../../images/illustration-features-tab-1.svg'
+// import ImageFeatures2 from '../../images/illustration-features-tab-2.svg'
+// import ImageFeatures3 from '../../images/illustration-features-tab-3.svg'
+
+import options from './features.json'
 
 export default function Features() {
-  return (
-    <section className={styled.features}>
-      <div className={styled.featuresHeader}>
-        <h2 className={styled.title}>Features</h2>
+  const optionSelect = (option) => {
+    console.log(option)
+  }
 
-        <p className={styled.text}>
+  return (
+    <section className={styles.features}>
+      <div className={styles.featuresHeader}>
+        <h2 className={styles.title}>Features</h2>
+
+        <p className={styles.text}>
           Our aim is to make it quick and easy for you to access your favorite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
       </div>
-      <div>
-        <div>Simple Bookmarking</div>
-        <div>Speedy Searching</div>
-        <div>Easy Sharing</div>
+
+      <div className={styles.menu}>
+        {options.map((option) => (
+          <div className={styles.item} key={option.id}>
+            <p
+              className={styles.item__text}
+              onClick={() => optionSelect(option)}
+            >
+              {option.option}
+            </p>
+          </div>
+        ))}
       </div>
-      <div>
-        <h3>Bookmark in one click</h3>
-        <p>
+
+      <div className={styles.imgContainer}>
+        <div className={styles.imgBg}></div>
+        <img className={styles.img} src={ImageFeatures1} alt="" />
+      </div>
+
+      <div className={styles.bookmark}>
+        <h3 className={styles.title}>Bookmark in one click</h3>
+        <p className={styles.text}>
           Organize your bookmarks however you like. Our simple drag-and-drop
           interface gives you complete control over how you manage your favorite
           sites.
         </p>
 
-        <button>More Info</button>
+        <button className={styles.button}>More Info</button>
       </div>
-      Intelligent search Our powerful search feature will help you find saved
-      sites in no time at all. No need to trawl through all of your bookmarks.
-      More Info Share your bookmarks Easily share your bookmarks and collections
-      with others. Create a shareable link that you can send at the click of a
-      button. More Info
     </section>
   )
 }

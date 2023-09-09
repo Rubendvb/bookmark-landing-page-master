@@ -18,9 +18,9 @@
   font-size: $size;
 }
 
-@mixin button-browser($bg, $color-text) {
+@mixin button-browser($bg, $color-text, $width-button: 9.375rem) {
   height: 3rem;
-  width: 9.375rem;
+  width: $width-button;
   background-color: $bg;
   color: $color-text;
   font-weight: 500;
