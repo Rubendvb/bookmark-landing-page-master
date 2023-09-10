@@ -1,0 +1,69 @@
+@use '../../sass/variables' as v;
+@use '../../sass/mixins' as m;
+
+.questions {
+  margin-top: 150px;
+
+  @include m.side-padding;
+}
+
+.title {
+  @include m.title;
+}
+
+.textMain {
+  margin-top: 2rem;
+
+  @include m.text(v.$Grayish-Blue, 0.938rem);
+}
+
+.bookmark {
+  margin-top: 3.25rem;
+}
+
+.containerBookmark {
+  padding: 32px 0 22px;
+  border-bottom: 1px solid #f0e4e4;
+  position: relative;
+
+  &__check {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    z-index: 1;
+    opacity: 0;
+
+    &:checked ~ {
+      .containerBookmark__text {
+        display: block;
+      }
+
+      .containerBookmark__title {
+        margin-bottom: 46px;
+      }
+
+      .containerBookmark__title::after {
+        content: url(../../images/icon-arrow.svg);
+        transform: rotate(180deg) translate(0px, 4px);
+      }
+    }
+  }
+
+  &__title {
+    @include m.text(v.$Very-Dark-Blue, 0.938rem);
+
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      content: url(../../images/icon-arrow.svg);
+      transition: all 0.8s;
+    }
+  }
+
+  &__text {
+    display: none;
+  }
+}
