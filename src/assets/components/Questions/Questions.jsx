@@ -60,7 +60,8 @@ export default function Questions() {
           </span>
         </div>
       </div>
-      <button>More Info</button>
+
+      <button className={styles.button}>More Info</button>
     </section>
   )
 }

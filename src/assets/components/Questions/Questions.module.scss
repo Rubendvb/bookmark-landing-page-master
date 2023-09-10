@@ -2,7 +2,7 @@
 @use '../../sass/mixins' as m;
 
 .questions {
-  margin-top: 150px;
+  margin: 9.375rem 0 7.5rem;
 
   @include m.side-padding;
 }
@@ -18,7 +18,7 @@
 }
 
 .bookmark {
-  margin-top: 3.25rem;
+  margin: 3.25rem 0 3rem;
 }
 
 .containerBookmark {
@@ -44,8 +44,9 @@
       }
 
       .containerBookmark__title::after {
-        content: url(../../images/icon-arrow.svg);
+        content: url('../../images/icon-arrow-up.svg');
         transform: rotate(180deg) translate(0px, 4px);
+        transition: all 0.8s;
       }
     }
   }
@@ -58,12 +59,22 @@
     justify-content: space-between;
 
     &::after {
-      content: url(../../images/icon-arrow.svg);
+      content: url('../../images/icon-arrow.svg');
       transition: all 0.8s;
     }
   }
 
   &__text {
     display: none;
+
+    @include m.text(v.$Grayish-Blue, 0.938rem);
+    text-align: start;
   }
+}
+
+.button {
+  margin: 0 auto;
+  display: block;
+
+  @include m.button-browser(v.$Soft-Blue, #fff, 7rem);
 }
