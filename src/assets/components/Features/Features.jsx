@@ -1,4 +1,5 @@
-import styles from './Features.module.scss'
+import { useState } from 'react'
+import classNames from 'classnames'
 
 import ImageFeatures1 from '../../images/illustration-features-tab-1.svg'
 // import ImageFeatures2 from '../../images/illustration-features-tab-2.svg'
@@ -6,9 +7,19 @@ import ImageFeatures1 from '../../images/illustration-features-tab-1.svg'
 
 import options from './features.json'
 
+import styles from './Features.module.scss'
+
 export default function Features() {
+  const [selectOption, setSelectOption] = useState(1)
+  const [selectTitle, setSelectTitle] = useState(options[0].title)
+  const [selectContent, setselectContent] = useState(options[0].content)
+
   const optionSelect = (option) => {
-    console.log(option)
+    setSelectOption(option.id)
+
+    setSelectTitle(option.title)
+
+    setselectContent(option.content)
   }
 
   return (
@@ -27,7 +38,10 @@ export default function Features() {
         {options.map((option) => (
           <div className={styles.item} key={option.id}>
             <p
-              className={styles.item__text}
+              className={classNames({
+                [styles.item__text]: true,
+                [styles['item__text--activated']]: option.id === selectOption,
+              })}
               onClick={() => optionSelect(option)}
             >
               {option.option}
@@ -42,12 +56,8 @@ export default function Features() {
       </div>
 
       <div className={styles.bookmark}>
-        <h3 className={styles.title}>Bookmark in one click</h3>
-        <p className={styles.text}>
-          Organize your bookmarks however you like. Our simple drag-and-drop
-          interface gives you complete control over how you manage your favorite
-          sites.
-        </p>
+        <h3 className={styles.title}>{selectTitle}</h3>
+        <p className={styles.text}>{selectContent}</p>
 
         <button className={styles.button}>More Info</button>
       </div>
