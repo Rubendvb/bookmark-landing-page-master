@@ -1,0 +1,51 @@
+@use '../../sass/variables' as v;
+@use '../../sass/mixins' as m;
+
+.downloadExtension {
+  margin-top: 8rem;
+
+  @include m.side-padding;
+}
+
+.title {
+  @include m.title;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  @include m.text(v.$Grayish-Blue, 0.938rem);
+}
+
+.containerBrowser {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 24px;
+  box-shadow: 0px 20px 40px -18px rgba(0, 0, 0, 0.5);
+}
+
+.titleBrowser {
+  margin: 40px 0 8px;
+
+  @include m.title(1.2rem);
+}
+
+.span {
+  margin-bottom: 30px;
+
+  @include m.text(v.$Grayish-Blue, 0.875rem);
+}
+
+.button {
+  margin-top: 24px;
+
+  @include m.button-browser(v.$Soft-Blue, #fff, 14.5rem);
+}

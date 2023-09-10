@@ -15,7 +15,7 @@
 }
 
 .text {
-  @include m.text(v.$Grayish-Blue, 1rem);
+  @include m.text(v.$Grayish-Blue, 0.938rem);
 }
 
 .simpleMain {
