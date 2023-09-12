@@ -28,6 +28,12 @@
   gap: 1rem;
 }
 
+.bgInput {
+  background-color: v.$Soft-Red;
+  padding: 2px;
+  border-radius: 6px;
+}
+
 .input,
 .button {
   width: 100%;
@@ -36,12 +42,33 @@
   border: none;
 }
 
+.containerInput {
+  position: relative;
+}
+
 .input {
   padding: 0 1.25rem;
+  outline: none;
 
   &::placeholder {
     color: #f0e4e4;
   }
+}
+
+.erro {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+}
+
+.message {
+  // display: none;
+  color: #fff;
+  font-size: 0.563rem;
+  font-style: italic;
+  font-weight: 500;
+  padding: 0.375rem;
 }
 
 .button {

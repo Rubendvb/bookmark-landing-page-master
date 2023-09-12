@@ -11,15 +11,19 @@
 
       &:checked ~ {
         .header__nav__label {
-          z-index: 1;
+          z-index: 2;
         }
 
         .header__nav__ul {
-          height: 80vh;
+          height: 100vh;
         }
 
         ul {
-          top: -60px;
+          top: -40px;
+        }
+
+        .header__nav__img {
+          z-index: 2;
         }
       }
 
@@ -75,6 +79,7 @@
       display: flex;
       flex-direction: column;
       height: 0;
+      justify-content: space-between;
       left: -32px;
       list-style: none;
       overflow: hidden;
@@ -82,8 +87,8 @@
       padding: 100px 32px;
       top: -500px;
       transition: all 0.8s ease-in;
-      width: 100%;
-      justify-content: space-between;
+      width: 100vw;
+      z-index: 1;
 
       &__li a {
         cursor: pointer;
