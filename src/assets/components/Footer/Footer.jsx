@@ -1,29 +1,38 @@
-import Logo from '../../images/logo-bookmark.svg'
 import LogoFacebook from '../../images/icon-facebook.svg'
 import LogoTwitter from '../../images/icon-twitter.svg'
+import Logo from '../Logo/Logo'
+
+import styles from './Footer.module.scss'
 
 export default function Footer() {
   return (
-    <footer>
-      <div>
-        <ul>
+    <footer className={styles.footer}>
+      <div className={styles.footerMenu}>
+        <div className={styles.imgFooter}>
+          <Logo />
+        </div>
+
+        <ul className={styles.ulFooter}>
           <li>
-            <img src={Logo} alt="" />
+            <a href="">Features</a>
           </li>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Contact</li>
+          <li>
+            <a href="">Pricing</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
         </ul>
 
-        <div>
+        <div className={styles.social}>
           <img src={LogoFacebook} alt="" />
           <img src={LogoTwitter} alt="" />
         </div>
       </div>
 
-      <div>
+      <div className={styles.personal}>
         <p className="attribution">
-          Challenge by
+          Challenge by{' '}
           <a
             href="https://www.frontendmentor.io?ref=challenge"
             target="_blank"

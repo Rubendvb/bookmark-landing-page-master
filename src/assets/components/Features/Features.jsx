@@ -12,14 +12,14 @@ import styles from './Features.module.scss'
 export default function Features() {
   const [selectOption, setSelectOption] = useState(1)
   const [selectTitle, setSelectTitle] = useState(options[0].title)
-  const [selectContent, setselectContent] = useState(options[0].content)
+  const [selectContent, setSelectContent] = useState(options[0].content)
 
   const optionSelect = (option) => {
     setSelectOption(option.id)
 
     setSelectTitle(option.title)
 
-    setselectContent(option.content)
+    setSelectContent(option.content)
   }
 
   return (

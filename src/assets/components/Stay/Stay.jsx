@@ -9,7 +9,7 @@ export default function Stay() {
       <div className={styles.containerInput}>
         <input
           className={styles.input}
-          type="text"
+          type="email"
           placeholder="Enter your email address"
         />
 

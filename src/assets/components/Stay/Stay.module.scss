@@ -36,9 +36,12 @@
   border: none;
 }
 
-.input::placeholder {
-  color: #f0e4e4;
+.input {
   padding: 0 1.25rem;
+
+  &::placeholder {
+    color: #f0e4e4;
+  }
 }
 
 .button {
