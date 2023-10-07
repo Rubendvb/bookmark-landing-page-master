@@ -53,6 +53,13 @@
   right: 0;
   top: 60px;
   z-index: -1;
+
+  @media only screen and (min-width: 768px) {
+    height: 368px;
+    width: 68%;
+    border-radius: 24% 0 0 26%;
+    top: 167px;
+  }
 }
 
 .img {
