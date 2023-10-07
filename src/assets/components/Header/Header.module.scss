@@ -1,10 +1,24 @@
 @use './../../sass/variables' as v;
+@use './../../sass/mixins' as m;
 
 .header {
   padding: 2.5rem 2rem;
 
+  @media only screen and (min-width: 768px) {
+    padding: 1.7rem 5rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding: 3.5rem 10rem;
+  }
+
   &__nav {
     position: relative;
+
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+    }
 
     &__check {
       display: none;
@@ -55,6 +69,11 @@
       z-index: 1;
       display: inline-block;
       position: absolute;
+
+      @media only screen and (min-width: 992px) {
+        z-index: 0;
+        position: relative;
+      }
     }
 
     &__label {
@@ -67,13 +86,13 @@
       &__img__close {
         display: none;
       }
+
+      @media only screen and (min-width: 992px) {
+        display: none;
+      }
     }
 
     &__ul {
-      .containerLi {
-        width: 100%;
-      }
-
       align-items: center;
       background-color: v.$Very-Dark-Blue-Menu;
       display: flex;
@@ -90,6 +109,23 @@
       width: 100vw;
       z-index: 1;
 
+      @media only screen and (min-width: 768px) {
+        left: -81px;
+      }
+
+      @media only screen and (min-width: 992px) {
+        position: relative;
+        top: 0;
+        background-color: unset;
+        z-index: unset;
+        left: unset;
+        width: 100%;
+        overflow: unset;
+        padding: unset;
+        transition: unset;
+        flex-direction: row;
+      }
+
       &__li a {
         cursor: pointer;
         text-decoration: none;
@@ -97,6 +133,12 @@
         text-transform: uppercase;
         letter-spacing: 4px;
         font-size: 18px;
+
+        @media only screen and (min-width: 992px) {
+          color: v.$Very-Dark-Blue;
+          font-size: 0.75rem;
+          letter-spacing: 2px;
+        }
       }
 
       &__li {
@@ -105,9 +147,29 @@
         width: 100%;
         text-align: center;
 
+        @media only screen and (min-width: 992px) {
+          border-bottom: unset;
+          width: unset;
+        }
+
         &:nth-child(1) {
           border-top: 1px solid v.$Grayish-Blue;
+
+          @media only screen and (min-width: 992px) {
+            border-top: unset;
+          }
         }
+      }
+    }
+
+    .containerLi {
+      width: 100%;
+      display: flex;
+
+      @media only screen and (min-width: 992px) {
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2.875rem;
       }
     }
 
@@ -125,6 +187,17 @@
         font-weight: 500;
         letter-spacing: 4px;
         text-align: center;
+
+        @media only screen and (min-width: 992px) {
+          background-color: v.$Soft-Red;
+          padding: 1rem 2rem;
+          font-size: 0.75rem;
+          font-weight: 500;
+          letter-spacing: 2px;
+          border-radius: 8px;
+          box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.5);
+        }
+        border-color: v.$Soft-Red;
       }
     }
 
@@ -132,6 +205,10 @@
       display: flex;
       gap: 2.5rem;
       align-items: center;
+
+      @media only screen and (min-width: 992px) {
+        display: none;
+      }
     }
   }
 }
