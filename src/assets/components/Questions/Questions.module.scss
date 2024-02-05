@@ -36,7 +36,8 @@
 
     &:checked ~ {
       .containerBookmark__text {
-        display: block;
+        display: flex;
+        align-items: center;
       }
 
       .containerBookmark__title {

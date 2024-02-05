@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import IconMenuOpen from '../../images/icon-hamburger.svg'
 import IconMenuClose from '../../images/icon-close.svg'
 import IconFacebook from '../../images/icon-facebook.svg'
@@ -7,6 +9,28 @@ import styles from './Header.module.scss'
 import Logo from '../Logo/Logo'
 
 export default function Header() {
+  const menuToggle = document.getElementById('nav__check')
+
+  useEffect(() => {
+    const body = document.body
+
+    function handleMenuToggle() {
+      if (menuToggle) {
+        if (menuToggle.checked) {
+          body.classList.toggle('disable-scroll')
+        } else {
+          body.classList.remove('disable-scroll')
+        }
+      }
+    }
+
+    menuToggle?.addEventListener('change', handleMenuToggle)
+
+    return () => {
+      menuToggle?.removeEventListener('change', handleMenuToggle)
+    }
+  }, [menuToggle])
+
   return (
     <header className={styles.header}>
       <nav className={styles.header__nav}>
