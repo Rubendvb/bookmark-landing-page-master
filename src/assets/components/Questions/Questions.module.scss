@@ -5,6 +5,11 @@
   margin: 9.375rem 0 7.5rem;
 
   @include m.side-padding;
+
+  @media only screen and (min-width: 992px) {
+    margin: 15rem auto;
+    width: 42%;
+  }
 }
 
 .title {
@@ -26,6 +31,10 @@
   border-bottom: 1px solid #f0e4e4;
   position: relative;
 
+  &:nth-child(1) {
+    border-top: 1px solid #f0e4e4;
+  }
+
   &__check {
     display: inline-block;
     position: absolute;
@@ -33,6 +42,7 @@
     height: 20px;
     z-index: 1;
     opacity: 0;
+    cursor: pointer;
 
     &:checked ~ {
       .containerBookmark__text {
@@ -58,6 +68,7 @@
     text-align: left;
     display: flex;
     justify-content: space-between;
+    user-select: none;
 
     &::after {
       content: url('../../images/icon-arrow.svg');
@@ -67,6 +78,7 @@
 
   &__text {
     display: none;
+    user-select: none;
 
     @include m.text(v.$Grayish-Blue, 0.938rem);
     text-align: start;

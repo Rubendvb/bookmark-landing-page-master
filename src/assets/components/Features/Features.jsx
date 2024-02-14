@@ -50,16 +50,16 @@ export default function Features() {
         ))}
       </div>
 
-      <div className={styles.imgContainer}>
-        <div className={styles.imgBg}></div>
-        <img className={styles.img} src={ImageFeatures1} alt="" />
-      </div>
-
-      <div className={styles.bookmark}>
-        <h3 className={styles.title}>{selectTitle}</h3>
-        <p className={styles.text}>{selectContent}</p>
-
-        <button className={styles.button}>More Info</button>
+      <div className={styles.containerContent}>
+        <div className={styles.imgContainer}>
+          <div className={styles.imgBg}></div>
+          <img className={styles.img} src={ImageFeatures1} alt="" />
+        </div>
+        <div className={styles.bookmark}>
+          <h3 className={styles.bookmark__title}>{selectTitle}</h3>
+          <p className={styles.bookmark__text}>{selectContent}</p>
+          <button className={styles.button}>More Info</button>
+        </div>
       </div>
     </section>
   )

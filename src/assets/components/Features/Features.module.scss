@@ -3,12 +3,22 @@
 
 .features {
   margin-top: 10rem;
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 7rem;
+  }
 }
 
 .featuresHeader {
   margin-bottom: 2.75rem;
 
   @include m.side-padding;
+
+  @media only screen and (min-width: 992px) {
+    padding: 0;
+    width: 36%;
+    margin: 0 auto 5rem;
+  }
 }
 
 .title {
@@ -27,6 +37,14 @@
   align-items: center;
 
   @include m.side-padding;
+
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+    padding: 0;
+    border-bottom: 1px solid #f0e4e4;
+    width: 50%;
+    margin: 0 auto 4.5rem;
+  }
 }
 
 .item {
@@ -38,6 +56,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (min-width: 992px) {
+    border: none;
+  }
+
   &__text {
     @include m.text(v.$Grayish-Blue, 0.875rem);
     cursor: pointer;
@@ -56,12 +79,29 @@
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 0);
+
+        @media only screen and (min-width: 992px) {
+          width: 100%;
+        }
       }
     }
   }
 
   &:last-child {
     border-bottom: 1px solid #f0e4e4;
+
+    @media only screen and (min-width: 992px) {
+      border: none;
+    }
+  }
+}
+
+.containerContent {
+  @media only screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15rem;
+    align-items: center;
   }
 }
 
@@ -78,12 +118,25 @@
   left: 0;
   top: 33px;
   z-index: -1;
+
+  @media only screen and (min-width: 992px) {
+    top: 86px;
+    height: 352px;
+    width: 104%;
+    border-radius: 0 24% 32% 0;
+  }
 }
 
 .img {
   width: 100%;
 
   @include m.side-padding;
+
+  @media only screen and (min-width: 992px) {
+    padding: 0;
+    max-width: 536px;
+    margin-left: 11rem;
+  }
 }
 
 .bookmark {
@@ -92,6 +145,29 @@
   flex-direction: column;
 
   @include m.side-padding;
+
+  @media only screen and (min-width: 992px) {
+    padding: 0;
+    margin: 0;
+    width: 72%;
+  }
+
+  &__title {
+    @include m.title;
+
+    @media only screen and (min-width: 992px) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    @include m.text(v.$Grayish-Blue, 0.938rem);
+    margin-top: 1.5rem;
+
+    @media only screen and (min-width: 992px) {
+      text-align: left;
+    }
+  }
 }
 
 .button {
@@ -99,4 +175,9 @@
   margin-top: 1rem;
 
   @include m.button-browser(v.$Soft-Blue, #fff, 7.125rem);
+
+  @media only screen and (min-width: 992px) {
+    align-self: flex-start;
+    width: 114px;
+  }
 }

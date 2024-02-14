@@ -38,46 +38,48 @@ export default function Stay() {
   }
   return (
     <section className={styles.stay}>
-      <p className={styles.paragraph}>35,000+ already joined</p>
-      <h2 className={styles.title}>Stay up-to-date with what we’re doing</h2>
+      <div>
+        <p className={styles.paragraph}>35,000+ already joined</p>
+        <h2 className={styles.title}>Stay up-to-date with what we’re doing</h2>
 
-      <form className={styles.containerInput} onSubmit={handleSubmit}>
-        <div
-          className={classNames({
-            [styles['bgInput']]: erroActivated === true,
-          })}
-        >
-          <div className={styles.containerInput}>
-            <input
-              className={styles.input}
-              ref={emailInputRef}
-              type="email"
-              value={email}
-              name={email}
-              onChange={handleChange}
-              placeholder="Enter your email address"
-            />
+        <form className={styles.containerInput} onSubmit={handleSubmit}>
+          <div
+            className={classNames({
+              [styles['bgInput']]: erroActivated === true,
+            })}
+          >
+            <div className={styles.containerInput}>
+              <input
+                className={styles.input}
+                ref={emailInputRef}
+                type="email"
+                value={email}
+                name={email}
+                onChange={handleChange}
+                placeholder="Enter your email address"
+              />
 
-            <img
+              <img
+                style={{ display: erroActivated ? 'inline-block' : 'none' }}
+                className={styles.erro}
+                src={IconErro}
+                alt=""
+              />
+            </div>
+
+            <span
               style={{ display: erroActivated ? 'inline-block' : 'none' }}
-              className={styles.erro}
-              src={IconErro}
-              alt=""
-            />
+              className={styles.message}
+            >
+              Whoops, make sure it{"'"}s an email
+            </span>
           </div>
 
-          <span
-            style={{ display: erroActivated ? 'inline-block' : 'none' }}
-            className={styles.message}
-          >
-            Whoops, make sure it{"'"}s an email
-          </span>
-        </div>
-
-        <button className={styles.button} type="submit">
-          Contact Us
-        </button>
-      </form>
+          <button className={styles.button} type="submit">
+            Contact Us
+          </button>
+        </form>
+      </div>
     </section>
   )
 }

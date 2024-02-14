@@ -8,21 +8,22 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerMenu}>
-        <div className={styles.imgFooter}>
-          <Logo />
+        <div>
+          <div className={styles.imgFooter}>
+            <Logo />
+          </div>
+          <ul className={styles.ulFooter}>
+            <li>
+              <a href="">Features</a>
+            </li>
+            <li>
+              <a href="">Pricing</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
         </div>
-
-        <ul className={styles.ulFooter}>
-          <li>
-            <a href="">Features</a>
-          </li>
-          <li>
-            <a href="">Pricing</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
-          </li>
-        </ul>
 
         <div className={styles.social}>
           <img src={LogoFacebook} alt="" />

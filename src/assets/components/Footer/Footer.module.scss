@@ -8,6 +8,10 @@
 
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+
+  @media only screen and (min-width: 992px) {
+    padding: 2.5rem 6.25rem;
+  }
 }
 
 .footerMenu {
@@ -15,6 +19,18 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 62px;
+  }
 }
 
 .imgFooter svg g:nth-child(1) > path {
@@ -28,6 +44,11 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+    margin: 0;
+  }
 
   li {
     a {
