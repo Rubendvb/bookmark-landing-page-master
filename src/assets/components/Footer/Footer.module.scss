@@ -72,11 +72,17 @@
   display: flex;
   gap: 2.5rem;
 
+  @media only screen and (min-width: 992px) {
+    margin: 0;
+  }
+
   svg {
     cursor: pointer;
 
-    &:hover path {
-      fill: v.$Soft-Red;
+    @media only screen and (min-width: 992px) {
+      &:hover path {
+        fill: v.$Soft-Red;
+      }
     }
   }
 }
