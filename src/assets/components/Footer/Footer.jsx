@@ -1,6 +1,6 @@
-import LogoFacebook from '../../images/icon-facebook.svg'
-import LogoTwitter from '../../images/icon-twitter.svg'
+import IconFacebook from './IconFacebook/IconFacebook'
 import Logo from '../Logo/Logo'
+import IconTwitter from './IconTwitter/IconTwitter'
 
 import styles from './Footer.module.scss'
 
@@ -26,8 +26,8 @@ export default function Footer() {
         </div>
 
         <div className={styles.social}>
-          <img src={LogoFacebook} alt="" />
-          <img src={LogoTwitter} alt="" />
+          <IconFacebook />
+          <IconTwitter />
         </div>
       </div>
 

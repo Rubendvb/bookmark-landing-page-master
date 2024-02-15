@@ -85,6 +85,12 @@
         }
       }
     }
+
+    @media only screen and (min-width: 992px) {
+      &:hover {
+        color: v.$Soft-Red;
+      }
+    }
   }
 
   &:last-child {
@@ -135,6 +141,7 @@
   @media only screen and (min-width: 992px) {
     padding: 0;
     max-width: 536px;
+    max-height: 380px;
     margin-left: 11rem;
   }
 }

@@ -26,10 +26,12 @@
   }
 
   > div:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 62px;
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 62px;
+    }
   }
 }
 
@@ -57,6 +59,10 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       font-weight: 400;
+
+      &:hover {
+        color: v.$Soft-Red;
+      }
     }
   }
 }
@@ -65,6 +71,14 @@
   margin-top: 3rem;
   display: flex;
   gap: 2.5rem;
+
+  svg {
+    cursor: pointer;
+
+    &:hover path {
+      fill: v.$Soft-Red;
+    }
+  }
 }
 
 .personal {

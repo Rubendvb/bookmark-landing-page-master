@@ -89,4 +89,12 @@ form.containerInput {
   background-color: v.$Soft-Red;
   color: #fff;
   font-weight: 500;
+
+  @media only screen and (min-width: 992px) {
+    &:hover {
+      background-color: #fff;
+      color: v.$Soft-Red;
+      border: 1px solid v.$Soft-Red;
+    }
+  }
 }

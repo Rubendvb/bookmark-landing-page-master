@@ -68,10 +68,21 @@
 
 .buttonChrome {
   @include m.button-browser(v.$Soft-Blue, #fff);
+
+  &:hover {
+    background-color: #fff;
+    color: v.$Soft-Blue;
+    border: 1px solid v.$Soft-Blue;
+  }
 }
 
 .buttonFirefox {
   @include m.button-browser(#f7f7f7, v.$Very-Dark-Blue);
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid v.$Very-Dark-Blue;
+  }
 }
 
 .simpleImageContainer {

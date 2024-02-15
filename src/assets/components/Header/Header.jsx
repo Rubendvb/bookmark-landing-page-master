@@ -4,9 +4,9 @@ import IconMenuOpen from '../../images/icon-hamburger.svg'
 import IconMenuClose from '../../images/icon-close.svg'
 import IconFacebook from '../../images/icon-facebook.svg'
 import IconTwitter from '../../images/icon-twitter.svg'
+import Logo from '../Logo/Logo'
 
 import styles from './Header.module.scss'
-import Logo from '../Logo/Logo'
 
 export default function Header() {
   const menuToggle = document.getElementById('nav__check')

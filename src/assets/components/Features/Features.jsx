@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import classNames from 'classnames'
 
-import ImageFeatures1 from '../../images/illustration-features-tab-1.svg'
-// import ImageFeatures2 from '../../images/illustration-features-tab-2.svg'
-// import ImageFeatures3 from '../../images/illustration-features-tab-3.svg'
-
 import options from './features.json'
 
 import styles from './Features.module.scss'
@@ -13,6 +9,7 @@ export default function Features() {
   const [selectOption, setSelectOption] = useState(1)
   const [selectTitle, setSelectTitle] = useState(options[0].title)
   const [selectContent, setSelectContent] = useState(options[0].content)
+  const [selectImage, setSelectImage] = useState(options[0].image)
 
   const optionSelect = (option) => {
     setSelectOption(option.id)
@@ -20,6 +17,8 @@ export default function Features() {
     setSelectTitle(option.title)
 
     setSelectContent(option.content)
+
+    setSelectImage(option.image)
   }
 
   return (
@@ -53,7 +52,7 @@ export default function Features() {
       <div className={styles.containerContent}>
         <div className={styles.imgContainer}>
           <div className={styles.imgBg}></div>
-          <img className={styles.img} src={ImageFeatures1} alt="" />
+          <img className={styles.img} src={selectImage} alt="" />
         </div>
         <div className={styles.bookmark}>
           <h3 className={styles.bookmark__title}>{selectTitle}</h3>

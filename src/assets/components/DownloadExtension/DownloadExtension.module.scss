@@ -12,8 +12,10 @@
   }
 
   div:nth-child(1) {
-    width: 38%;
-    margin: 0 auto;
+    @media only screen and (min-width: 992px) {
+      width: 38%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -74,4 +76,10 @@
   margin-top: 24px;
 
   @include m.button-browser(v.$Soft-Blue, #fff, 14.5rem);
+
+  &:hover {
+    background-color: #fff;
+    color: v.$Soft-Blue;
+    border: 1px solid v.$Soft-Blue;
+  }
 }
