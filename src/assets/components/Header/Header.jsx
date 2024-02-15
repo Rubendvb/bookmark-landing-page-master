@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import IconMenuOpen from '../../images/icon-hamburger.svg'
 import IconMenuClose from '../../images/icon-close.svg'
@@ -9,27 +9,31 @@ import Logo from '../Logo/Logo'
 import styles from './Header.module.scss'
 
 export default function Header() {
-  const menuToggle = document.getElementById('nav__check')
+  const [menuChecked, setMenuChecked] = useState(false)
 
   useEffect(() => {
-    const body = document.body
-
-    function handleMenuToggle() {
-      if (menuToggle) {
-        if (menuToggle.checked) {
-          body.classList.toggle('disable-scroll')
-        } else {
-          body.classList.remove('disable-scroll')
-        }
-      }
+    function handleMenuToggle(e) {
+      setMenuChecked(e.target.checked)
     }
+
+    const menuToggle = document.getElementById('nav__check')
 
     menuToggle?.addEventListener('change', handleMenuToggle)
 
     return () => {
       menuToggle?.removeEventListener('change', handleMenuToggle)
     }
-  }, [menuToggle])
+  }, [])
+
+  useEffect(() => {
+    const body = document.body
+
+    if (menuChecked) {
+      body.classList.add('disable-scroll')
+    } else {
+      body.classList.remove('disable-scroll')
+    }
+  }, [menuChecked])
 
   return (
     <header className={styles.header}>
