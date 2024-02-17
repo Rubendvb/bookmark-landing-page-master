@@ -97,26 +97,19 @@
 
 .imgBg {
   background-color: v.$Soft-Blue;
-  height: 200px;
+  height: 75%;
   width: 80%;
   border-radius: 24% 0 0 24%;
   position: absolute;
   right: 0;
-  top: 60px;
+  top: 23%;
   z-index: -1;
 
-  @media only screen and (min-width: 768px) {
-    height: 368px;
-    width: 68%;
-    border-radius: 24% 0 0 26%;
-    top: 167px;
-  }
-
   @media only screen and (min-width: 992px) {
-    border-radius: 24% 0 0 35%;
-    top: 145px;
-    height: 350px;
-    width: 71%;
+    height: 75%;
+    width: 70%;
+    border-radius: 70% 0 0 40%;
+    top: 32%;
   }
 }
 
