@@ -11,7 +11,11 @@ export default function Questions() {
 
       <div className={styles.bookmark}>
         <div className={styles.containerBookmark}>
-          <input className={styles.containerBookmark__check} type="checkbox" />
+          <input
+            className={styles.containerBookmark__check}
+            type="checkbox"
+            aria-label="Abrir/Fechar Bookmark"
+          />
           <p className={styles.containerBookmark__title}>What is Bookmark?</p>
           <p className={styles.containerBookmark__text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -21,7 +25,11 @@ export default function Questions() {
         </div>
 
         <div className={styles.containerBookmark}>
-          <input className={styles.containerBookmark__check} type="checkbox" />
+          <input
+            className={styles.containerBookmark__check}
+            type="checkbox"
+            aria-label="Abrir/Fechar Bookmark"
+          />
           <p className={styles.containerBookmark__title}>
             How can I request a new browser?
           </p>
@@ -36,7 +44,11 @@ export default function Questions() {
         </div>
 
         <div className={styles.containerBookmark}>
-          <input className={styles.containerBookmark__check} type="checkbox" />
+          <input
+            className={styles.containerBookmark__check}
+            type="checkbox"
+            aria-label="Abrir/Fechar Bookmark"
+          />
           <p className={styles.containerBookmark__title}>
             Is there a mobile app?
           </p>
@@ -49,7 +61,11 @@ export default function Questions() {
         </div>
 
         <div className={styles.containerBookmark}>
-          <input className={styles.containerBookmark__check} type="checkbox" />
+          <input
+            className={styles.containerBookmark__check}
+            type="checkbox"
+            aria-label="Abrir/Fechar Bookmark"
+          />
           <p className={styles.containerBookmark__title}>
             What about other Chromium browsers?
           </p>
