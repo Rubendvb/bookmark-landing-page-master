@@ -21,7 +21,7 @@ export default function DownloadExtension() {
           <img src={LogoChrome} alt="" />
           <h3 className={styles.titleBrowser}>Add to Chrome</h3>
           <span className={styles.span}>Minimum version 62</span>
-          <img src={BgDots} alt="" />
+          <img className={styles.dots} src={BgDots} alt="" />
           <button className={styles.button}>Add & Install Extension</button>
         </article>
 
@@ -29,7 +29,7 @@ export default function DownloadExtension() {
           <img src={LogoFirefox} alt="" />
           <h3 className={styles.titleBrowser}>Add to Firefox</h3>
           <span className={styles.span}>Minimum version 55</span>
-          <img src={BgDots} alt="" />
+          <img className={styles.dots} src={BgDots} alt="" />
           <button className={styles.button}>Add & Install Extension</button>
         </article>
 
@@ -37,7 +37,7 @@ export default function DownloadExtension() {
           <img src={LogoOpera} alt="" />
           <h3 className={styles.titleBrowser}>Add to Opera</h3>
           <span className={styles.span}>Minimum version 46</span>
-          <img src={BgDots} alt="" />
+          <img className={styles.dots} src={BgDots} alt="" />
           <button className={styles.button}>Add & Install Extension</button>
         </article>
       </div>
